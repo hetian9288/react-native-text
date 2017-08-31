@@ -10,15 +10,15 @@
     "keywords": [
         "react",
         "native",
-        "react-native"
+        "react-native",
         "android",
         "ios",
-        "component",
+        "component"
     ],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "prop-types": "^15.5.10",
+        "prop-types": "^15.5.10"
     },
     "peerDependencies": {
         "react": "*",
