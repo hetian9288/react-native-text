@@ -18,6 +18,10 @@ class mText extends PureComponent{
 				})
 		}
 
+		setNativeProps(param: object) {
+				this.textRef.setNativeProps(param);
+		}
+
 		componentWillReceiveProps(nextProps) {
 				if(this.state.label !== nextProps.children) {
 						this.setText(nextProps.children)
@@ -25,7 +29,7 @@ class mText extends PureComponent{
 		}
 
 		render(){
-				return <Text {...this.props}>{this.state.label}</Text>
+				return <Text ref={r => this.textRef = r} {...this.props}>{this.state.label}</Text>
 		}
 }
 
