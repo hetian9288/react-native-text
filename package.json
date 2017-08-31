@@ -18,7 +18,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "prop-types": "^15.5.10"
+        "prop-types": "^15.5.10",
+        "lodash": "^4.17.4"
     },
     "peerDependencies": {
         "react": "*",
