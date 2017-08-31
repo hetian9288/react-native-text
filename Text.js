@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
+import _ from 'lodash/lang'
 import {
 		Text,
 } from 'react-native'
@@ -12,7 +13,7 @@ class mText extends PureComponent{
 				this.setText(this.props.children)
 		}
 
-		setText = (text: String) => {
+		setText = (text: any) => {
 				this.setState({
 						label: text
 				})
@@ -23,7 +24,7 @@ class mText extends PureComponent{
 		}
 
 		componentWillReceiveProps(nextProps) {
-				if(this.state.label !== nextProps.children) {
+				if(!_.isEqual(this.state.label, nextProps.children)){
 						this.setText(nextProps.children)
 				}
 		}
@@ -34,8 +35,7 @@ class mText extends PureComponent{
 }
 
 mText.propTypes = {
-		...Text.propTypes,
-		children: PropTypes.string.isRequired
+		...Text.propTypes
 }
 
 export default mText;
